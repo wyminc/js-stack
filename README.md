@@ -1,6 +1,6 @@
 # The Stack Datastructure
 
-We will be creating a **module** that helps us generate a **Stack**.  * A stack is a data structure that allows adding and removing elements in a particular order. Everytime an item is added, it goes to the top of the 'stack' Everytime an item is removed, the item on the top of the stack is removed from the datastructure and returned.  A stack is a LIFO (last in first out) structure.
+We will be creating a **module** that helps us generate a **Stack**.  A stack is a data structure that allows adding and removing elements in a particular order. Everytime an item is added, it goes to the top of the 'stack' Everytime an item is removed, the item on the top of the stack is removed from the datastructure and returned.  A stack is a LIFO (last in first out) structure.
 
 ## Methods
 
