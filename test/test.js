@@ -1,11 +1,13 @@
 var Stack = require('../lib/Stack.js')
 // var assert = require('assert');
 var should = require('chai').should();
-var myStack = new Stack;
-
+var myStack;
 describe('Stack', function() {
 
   describe('Class methods', function() {
+    beforeEach(function() {
+      myStack = new Stack;
+    });
     it('should have a push() function', function() {
       myStack.push.should.be.a('function')
     });
@@ -18,6 +20,9 @@ describe('Stack', function() {
   });
 
   describe('Stack behavior', function() {
+    beforeEach(function() {
+      myStack = new Stack;
+    })
     it('A new stack should start with a size of 0', function(){
       var size = myStack.size();
       size.should.equal(0);
@@ -29,12 +34,15 @@ describe('Stack', function() {
       myStack.size().should.equal(3);
     });
     it('A stack should have a size of 0 after removing the previous 3 items added', function() {
+      myStack.push('a');
+      myStack.push('b');
+      myStack.push('c');
       myStack.pop();
       myStack.pop();
       myStack.pop();
       myStack.size().should.equal(0);
     })
-    it('Should return Null when removing from an empty Stack', function() {
+    it('Should return null when removing from an empty Stack', function() {
       var popped = myStack.pop();
       should.equal(popped, null);
     });
@@ -52,12 +60,15 @@ describe('Stack', function() {
       myStack.size().should.equal(2);
     });
     it('The most recently added item should be removed', function() {
+      myStack.push('a');
+      myStack.push('b');
       myStack.pop().should.equal('b');
     });
     it('Removes most recent item, after newer items have already been added and removed', function() {
+      myStack.push('a');
       myStack.push('lollerskates');
       myStack.pop();
       myStack.pop().should.equal('a');
-    })
-  })
+    });
+  });
 });
