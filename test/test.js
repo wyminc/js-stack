@@ -1,4 +1,4 @@
-var Stack = require('../lib/Stack.js')
+var Stack = require('../lib/Stack.js');
 // var assert = require('assert');
 var should = require('chai').should();
 var myStack;
@@ -6,23 +6,23 @@ describe('Stack', function() {
 
   describe('Class methods', function() {
     beforeEach(function() {
-      myStack = new Stack;
+      myStack = new Stack();
     });
     it('should have a push() function', function() {
-      myStack.push.should.be.a('function')
+      myStack.push.should.be.a('function');
     });
     it('should have a pop() function', function() {
-      myStack.pop.should.be.a('function')
+      myStack.pop.should.be.a('function');
     });
     it('should have a size() function', function() {
-      myStack.size.should.be.a('function')
+      myStack.size.should.be.a('function');
     });
   });
 
   describe('Stack behavior', function() {
     beforeEach(function() {
-      myStack = new Stack;
-    })
+      myStack = new Stack();
+    });
     it('A new stack should start with a size of 0', function(){
       var size = myStack.size();
       size.should.equal(0);
@@ -41,7 +41,7 @@ describe('Stack', function() {
       myStack.pop();
       myStack.pop();
       myStack.size().should.equal(0);
-    })
+    });
     it('Should return null when removing from an empty Stack', function() {
       var popped = myStack.pop();
       should.equal(popped, null);
